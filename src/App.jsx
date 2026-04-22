@@ -1,3 +1,5 @@
+// HW-03'te tüm state ve handler'lar buradaydı, artık sadece düzen var
+// her bileşen kendi verisini Redux'tan çekiyor, prop geçirmeye gerek kalmadı
 import ContactForm from './components/ContactForm/ContactForm';
 import SearchBox from './components/SearchBox/SearchBox';
 import ContactList from './components/ContactList/ContactList';

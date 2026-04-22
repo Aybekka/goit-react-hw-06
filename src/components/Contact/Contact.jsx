@@ -1,3 +1,4 @@
+// HW-03'te contact ve onDelete prop alıyordu, şimdi sadece contact geliyor
 import { useDispatch } from 'react-redux';
 import { FaUser, FaPhone } from 'react-icons/fa';
 import { deleteContact } from '../../redux/contactsSlice';
@@ -19,6 +20,7 @@ const Contact = ({ contact }) => {
           {number}
         </span>
       </div>
+      {/* silme işlemini doğrudan dispatch ediyorum, callback zinciri yok */}
       <button
         className={styles.deleteBtn}
         onClick={() => dispatch(deleteContact(id))}

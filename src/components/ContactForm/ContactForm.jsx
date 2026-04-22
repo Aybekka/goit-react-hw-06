@@ -1,3 +1,4 @@
+// HW-03'te onAdd prop'u alıyordu, artık prop almıyor — dispatch ile doğrudan store'a yazıyor
 import { useDispatch } from 'react-redux';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -21,6 +22,7 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
+    // id üretimi artık slice'ın prepare fonksiyonunda, burada sadece {name, number} gönderiyorum
     dispatch(addContact(values));
     actions.resetForm();
   };
